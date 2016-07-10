@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Advanced Personal Website using Bootstrap">
     <meta name="author" content="Maru Pereira @Codify Academy">
-    <title>Advanced Personal Website Using Start Bootstrap theme 'Agency'   
-    </title>
+    <title>Walt Whitman's 21st Century Portfolio</title>
     
     <!--Favorite Icon-->
     <link rel="shortcut icon" href="favicon.ico">
@@ -33,10 +32,31 @@
         <![endif]-->
         <!--MAIN STYLESHEET-->
         <link  rel="stylesheet" href="css/main.css">
+    <script>
+    function init() {
+      enableVideoClicks();
+    }
+
+    function enableVideoClicks() {
+      var videos = document.getElementsByTagName('video') || [];
+      for (var i = 0; i < videos.length; i++) {
+        // TODO: use attachEvent in IE
+        videos[i].addEventListener('click', function(videoNode) {
+          return function() {
+            videoNode.play();
+          };
+        }(videos[i]));
+      }
+    }
+  </script>
 
     </head>
 
-    <body id="page-top" class="index">
+    <body id="page-top" class="index" onload="init()">
+        <video autoplay loop muted poster="screenshot.jpg" id="background">
+            <source src="img/leaves.mp4" type="video/mp4" width="400" height="300" controls>
+            </video>
+
 
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -68,7 +88,7 @@
                             <a class="page-scroll" href="#about">About</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#team">Team</a>
+                            <a  id="team_li" class="page-scroll" href="#team">Team</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#contact">Contact</a>
@@ -81,11 +101,16 @@
         </nav>
 
         <!-- Header -->
-        <header>
+        <header >
+            
+            <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
             <div class="container">
                 <div class="intro-text">
-                    <div class="intro-lead-in">Walter W. Whitman </div>
-                    <div class="intro-heading">It's Nice To Meet You.</div>
+                    <div class="intro-lead-in">Walter<br>Whitman </div>
+                    <div class="intro-heading"><span>Glad</span> To <span>Meet</span> Ya.</div>
                     <a id="topButton" href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
                 </div>
             </div>
@@ -97,33 +122,33 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <h2 class="section-heading">Writer &amp; Editor for Hire</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                        <h3 class="section-subheading text-muted">I like to write n' stuff.</h3>
                     </div>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                            <i class="fa fa-pagelines fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="service-heading">Freelance Articles: Nature &amp; Travel</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="service-heading threeHdng">Articles: Nature &amp; Travel</h4>
+                        <p class="text-muted">I've spent some time putzing around in nature, chewing on blades of grass. Or was it leaves of grass. Whatever, bruh. I can write, bruh. I've been a newspaper man, too. </p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                            <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="service-heading">Editing</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="service-heading threeHdng">Editing</h4>
+                        <p class="text-muted">Got an English paper? A Philosophy paper on Panantheist thought that needs some ideas worked out? Some spelling corrections? I'm your guy. Promise. I live for this stuff.  </p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                            <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="service-heading">Love Letters</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="service-heading threeHdng">Love Letters</h4>
+                        <p class="text-muted">Ok, so I'm not known for this stuff but believe me when I say I can make your lady melt. Like uh...Adele Rolling-In-The-Deep-kinda-melting. C'mon, I've been outta work for a while, bruh.</p>
                     </div>
                 </div>
             </div>
@@ -135,92 +160,92 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <h2 class="section-heading">Portfolio</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                        <h3 class="section-subheading text-muted">Check out yer man's work!</h3>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <a href="#" class="portfolio-link" data-toggle="modal">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
                                     <i class="fa fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
+                            <img src="img/portfolio/Walt.jpg" class="img-responsive" alt="Walt's classic look">
                         </a>
                         <div class="portfolio-caption">
-                            <h4>Round Icons</h4>
-                            <p class="text-muted">Graphic Design</p>
+                            <h4>Poems</h4>
+                            <p class="text-muted">Leaves of Grass</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <a href="#" class="portfolio-link" data-toggle="modal">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
                                     <i class="fa fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
+                            <img src="img/portfolio/Walt6.jpg" class="img-responsive" alt="Walt's Confident & Questioning Look">
                         </a>
                         <div class="portfolio-caption">
-                            <h4>Startup Framework</h4>
-                            <p class="text-muted">Website Design</p>
+                            <h4>Natural Philosophy</h4>
+                            <p class="text-muted">Older Stuff (1800's)</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <a href="#" class="portfolio-link" data-toggle="modal">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
                                     <i class="fa fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
+                            <img src="img/portfolio/Walt5.jpg" class="img-responsive" alt="Walt's Nature look">
                         </a>
                         <div class="portfolio-caption">
-                            <h4>Treehouse</h4>
-                            <p class="text-muted">Website Design</p>
+                            <h4>Treehouse Writings</h4>
+                            <p class="text-muted">Yep, def.</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <a href="#" class="portfolio-link" data-toggle="modal">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
                                     <i class="fa fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img src="img/portfolio/golden.png" class="img-responsive" alt="">
+                            <img src="img/portfolio/Walt1.jpg" class="img-responsive" alt="Walt's Treehouse Look">
                         </a>
                         <div class="portfolio-caption">
-                            <h4>Golden</h4>
-                            <p class="text-muted">Website Design</p>
+                            <h4>Love Letters</h4>
+                            <p class="text-muted">Hey, I'm still a Bro.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item" id="long_pic">
+                        <a href="#" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/Walt9.jpeg" class="img-responsive" alt="Walt's Digital Look">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>New Articles</h4>
+                            <p class="text-muted">(Digital Age)</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <a href="#" class="portfolio-link" data-toggle="modal">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
                                     <i class="fa fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img src="img/portfolio/escape.png" class="img-responsive" alt="">
+                            <img src="img/portfolio/Walt10.jpg" class="img-responsive" alt="Walt's 'I'm Ready' Look">
                         </a>
                         <div class="portfolio-caption">
-                            <h4>Escape</h4>
-                            <p class="text-muted">Website Design</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 portfolio-item">
-                        <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content">
-                                    <i class="fa fa-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="img/portfolio/dreams.png" class="img-responsive" alt="">
-                        </a>
-                        <div class="portfolio-caption">
-                            <h4>Dreams</h4>
-                            <p class="text-muted">Website Design</p>
+                            <h4>Editing Jobs</h4>
+                            <p class="text-muted">Gimme your papers!</p>
                         </div>
                     </div>
                 </div>
@@ -233,7 +258,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <h2 class="section-heading">About</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                        <h3 class="section-subheading text-muted"></h3>
                     </div>
                 </div>
                 <div class="row">
@@ -246,10 +271,10 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4>2009-2011</h4>
-                                        <h4 class="subheading">Our Humble Beginnings</h4>
+                                        <h4 class="subheading">My Humble (Re)Beginnings</h4>
                                     </div>
                                     <div class="timeline-body">
-                                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                        <p class="text-muted">The first time I got to be out in nature again, for a hot minute (in the 21st century).</p>
                                     </div>
                                 </div>
                             </li>
@@ -260,10 +285,10 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4>March 2011</h4>
-                                        <h4 class="subheading">An Agency is Born</h4>
+                                        <h4 class="subheading">A Magical Journey</h4>
                                     </div>
                                     <div class="timeline-body">
-                                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                        <p class="text-muted">What are these crazy machines called planes? What?! The first time I rode one, like Icharus toward the sun. Ahhh. What a beautiful thing. </p>
                                     </div>
                                 </div>
                             </li>
@@ -274,10 +299,10 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4>December 2012</h4>
-                                        <h4 class="subheading">Transition to Full Service</h4>
+                                        <h4 class="subheading">Computers!</h4>
                                     </div>
                                     <div class="timeline-body">
-                                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                        <p class="text-muted">These things are crazy! I can't even. Excuse me while I go write a poem about it. </p>
                                     </div>
                                 </div>
                             </li>
@@ -288,18 +313,18 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4>July 2014</h4>
-                                        <h4 class="subheading">Phase Two Expansion</h4>
+                                        <h4 class="subheading">I'm Ready</h4>
                                     </div>
                                     <div class="timeline-body">
-                                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                        <p class="text-muted">I got planes, I got a computer from which I can "internet" things to my editor all the way from nature...I'm ready to go back to the mountains and write.</p>
                                     </div>
                                 </div>
                             </li>
                             <li class="timeline-inverted">
                                 <div class="timeline-image">
-                                    <h4>Be Part
-                                        <br>Of Our
-                                        <br>Story!</h4>
+                                    <h4>Gimme 
+                                        <br>Some
+                                        <br>Work!</h4>
                                 </div>
                             </li>
                         </ul>
@@ -406,7 +431,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <h2 class="section-heading">Contact</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                        <h3 class="section-subheading text-muted">I'll write your love letters!</h3>
                     </div>
                 </div>
                 <div class="row">
@@ -462,12 +487,12 @@
                         </ul>
                     </div>
                     <div class="col-md-4">
-                        <ul class="list-inline quicklinks">
+                        <!-- <ul class="list-inline quicklinks">
                             <li><a href="#">Privacy Policy</a>
                             </li>
                             <li><a href="#">Terms of Use</a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </div>
